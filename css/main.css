@@ -1,0 +1,319 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans:700";
+@import "http://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700";
+@import "https://fonts.googleapis.com/css?family=Cardo";
+html, body {
+  font-family: "Raleway", sans-serif;
+  color: #6c7279;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  max-width: 1170px;
+  padding: 0;
+  margin: 0 auto; }
+
+/*=======================Header========================*/
+header {
+  height: 100px;
+  background-color: #292C47;
+  position: fixed;
+  z-index: 30;
+  width: 100%; }
+  header img {
+    float: left;
+    padding-top: 40px; }
+  header ul.nav {
+    float: right;
+    padding-top: 25px; }
+    header ul.nav a {
+      font-family: "Raleway", sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.749);
+      background-color: #292C47; }
+      header ul.nav a:hover, header ul.nav a:focus {
+        color: #fff;
+        background-color: #292C47;
+        transition-duration: .5s; }
+    header ul.nav li.icon {
+      display: none; }
+
+/*Hamburger*/
+@media screen and (max-width: 768px) {
+  header ul.nav li {
+    display: none;
+    right: 20px; }
+
+  header ul.nav li.icon {
+    float: right;
+    display: inline-block; } }
+@media screen and (max-width: 768px) {
+  header ul.nav.responsive {
+    position: relative;
+    opacity: 0.7;
+    margin-top: 33px; }
+    header ul.nav.responsive li {
+      float: none;
+      display: inline; }
+      header ul.nav.responsive li a {
+        text-align: center; }
+    header ul.nav.responsive li.icon {
+      position: absolute;
+      right: 20px;
+      top: 0px; } }
+/*Banner*/
+.banner {
+  background-image: url("../img/banner.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 750px; }
+  .banner h1 {
+    font-size: 65px;
+    font-family: "Open Sans";
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.092;
+    text-align: center;
+    padding-top: 25%; }
+  .banner p {
+    font-size: 22px;
+    font-family: "Raleway", sans-serif;
+    color: white;
+    line-height: 1.5;
+    text-align: center; }
+  .banner a.btn {
+    border-radius: 2px;
+    background-color: #e84545;
+    width: 200px;
+    height: 46px;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 15px 40px;
+    font-family: "Raleway", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 80px; }
+    .banner a.btn:hover {
+      background-color: #e52e2e;
+      color: #fff;
+      transition-duration: .5s; }
+
+/*=======================Features========================*/
+.features {
+  margin: 40px auto 100px auto; }
+  .features img {
+    margin: 70px auto 30px auto; }
+  .features h5 {
+    font-size: 14px;
+    font-family: "Raleway", sans-serif;
+    color: #2d3033;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2; }
+  .features p {
+    font-size: 14px;
+    font-family: "Raleway", sans-serif;
+    color: #6c7279;
+    margin: 20px; }
+
+/*=======================Works========================*/
+.works {
+  overflow: hidden; }
+  .works .img {
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding: 0;
+    overflow: hidden;
+    position: relative; }
+  .works .img.hover .overlay {
+    opacity: 1; }
+  .works .img.hover .overlay a.expand {
+    top: 50%;
+    margin-top: -30px;
+    opacity: 1; }
+  .works .overlay {
+    position: absolute;
+    z-index: 20;
+    background: rgba(232, 69, 69, 0.9);
+    overflow: hidden;
+    transition: all .5s;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0; }
+    .works .overlay a.expand {
+      position: absolute;
+      z-index: 100;
+      text-align: center;
+      color: #fff;
+      top: 0;
+      right: 0;
+      line-height: 50px;
+      font-weight: 400;
+      font-size: 30px;
+      left: 0;
+      margin: 0 auto;
+      opacity: 0;
+      transition: all 0.5s;
+      font-family: "Raleway", sans-serif; }
+      .works .overlay a.expand:hover {
+        text-decoration: none;
+        color: #fff; }
+    .works .overlay a.close-overlay {
+      position: absolute;
+      z-index: 100;
+      text-align: center;
+      color: #fff;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 45px;
+      height: 45px;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 45px;
+      background-color: #000;
+      cursor: pointer;
+      display: none; }
+
+/*=======================Teams========================*/
+.teams {
+  margin: 100px auto 60px auto; }
+  .teams h4 {
+    font-size: 22px;
+    font-family: "Raleway", sans-serif;
+    color: #2d3033;
+    line-height: 1.2;
+    text-align: left;
+    margin-top: 20px; }
+  .teams h5 {
+    font-size: 13px;
+    font-family: "Raleway", sans-serif;
+    color: #e84545;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: left; }
+  .teams p {
+    font-size: 14px;
+    font-family: "Raleway", sans-serif;
+    color: #6c7279;
+    line-height: 1.5;
+    margin-top: 25px; }
+  .teams ul {
+    display: inline-block;
+    margin: 15px 0 40px -40px; }
+    .teams ul li.btn {
+      border: 1px solid;
+      border-color: #e8ecee;
+      background-color: white;
+      width: 42px;
+      height: 42px;
+      border-radius: 3px;
+      padding-top: 8px; }
+      .teams ul li.btn:hover {
+        background-color: #e52e2e;
+        color: #fff;
+        transition-duration: .5s; }
+
+/*=======================Testimonials========================*/
+ul.slides {
+  background-color: #53354a; }
+  ul.slides p.quote {
+    font-size: 36px;
+    font-family: "Cardo", serif;
+    color: white;
+    font-style: italic;
+    line-height: 1.167;
+    margin: 50px auto 0 70px; }
+  ul.slides p.title {
+    font-size: 13px;
+    font-family: "Raleway", sans-serif;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.615;
+    margin: 35px auto 0 85px; }
+
+/*=======================Download========================*/
+.download h5 {
+  font-size: 28px;
+  font-family: "Raleway";
+  color: #2d3033;
+  line-height: 0.75;
+  margin-top: 30px; }
+.download p {
+  font-size: 13px;
+  font-family: "Raleway";
+  color: #2d3033;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.615;
+  margin: 20px 0 -40px 0; }
+.download a.btn {
+  border-radius: 2px;
+  background-color: #e84545;
+  width: 200px;
+  height: 46px;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 15px 40px;
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 80px; }
+  .download a.btn:hover {
+    background-color: #e52e2e;
+    color: #fff;
+    transition-duration: .5s; }
+
+/*=======================Footer========================*/
+footer {
+  margin-top: 100px; }
+  footer .footer-top {
+    background-color: #3a3e64;
+    padding-top: 50px;
+    padding-bottom: 90px; }
+    footer .footer-top h5 {
+      font-size: 14px;
+      font-family: "Raleway", sans-serif;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.2;
+      margin-bottom: 20px; }
+    footer .footer-top p {
+      font-size: 14px;
+      font-family: "Raleway", sans-serif;
+      color: rgba(255, 255, 255, 0.502);
+      line-height: 1.607; }
+    footer .footer-top ul {
+      margin-left: -40px; }
+      footer .footer-top ul li.btn {
+        border: 2px solid;
+        border-color: white;
+        width: 42px;
+        height: 42px;
+        border-radius: 3px;
+        padding-top: 8px;
+        margin-right: 5px; }
+        footer .footer-top ul li.btn:hover {
+          background-color: #e52e2e;
+          color: #fff;
+          transition-duration: .5s; }
+  footer .footer-bottom {
+    background-color: #313454;
+    height: 74px;
+    padding-top: 20px; }
+    footer .footer-bottom p {
+      font-size: 14px;
+      font-family: "Raleway", sans-serif;
+      color: rgba(255, 255, 255, 0.502);
+      line-height: 1.607; }
+
+/*# sourceMappingURL=main.css.map */

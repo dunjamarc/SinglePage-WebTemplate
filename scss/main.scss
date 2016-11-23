@@ -1,0 +1,349 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:700';
+@import 'http://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700';
+@import 'https://fonts.googleapis.com/css?family=Cardo';
+@import 'mixins';
+
+$text-font: "Raleway", sans-serif;
+$text-color: #6c7279;
+
+
+html, body {
+  font-family: $text-font;
+  color: $text-color;
+  margin: 0;
+  padding: 0; 
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+/*=======================Header========================*/
+header {
+  height: 100px;
+  background-color: #292C47;
+  position: fixed;
+  z-index: 30;
+  width: 100%;
+
+  img {
+    float: left;
+    padding-top: 40px;
+  }
+
+  ul.nav {
+    float: right;
+    padding-top: 25px;
+    a {
+      font-family: $text-font;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.749);
+      background-color: #292C47;
+      &:hover, &:focus {
+        color: #fff;
+        background-color: #292C47;
+        transition-duration: .5s;
+      }
+    }
+    li.icon {
+      display: none;
+    }
+  }
+}
+
+/*Hamburger*/
+@media screen and (max-width: 768px){
+  header ul.nav li {
+    display: none;
+    right: 20px;
+  }
+  header ul.nav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 768px){
+  header ul.nav.responsive {
+    position: relative;
+    opacity: 0.7;
+    margin-top: 33px;
+    
+    li {
+      float: none;
+      display: inline;
+      a {
+        text-align: center;
+      }
+    }
+    li.icon {
+      position: absolute;
+      right: 20px;
+      top: 0px;
+    }
+  }
+}
+
+/*Banner*/
+.banner {
+  background-image: url("../img/banner.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 750px;
+
+  h1 {
+    font-size: 65px;
+    font-family: "Open Sans";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.092;
+    text-align: center;
+    padding-top: 25%;
+  }
+  p {
+    font-size: 22px;
+    font-family: $text-font;
+    color: rgb(255, 255, 255);
+    line-height: 1.5;
+    text-align: center;
+  }
+  a.btn {
+    @include button;
+    &:hover {
+      @include btn-hover;
+    }
+  }
+}
+
+/*=======================Features========================*/
+.features {
+  margin: 40px auto 100px auto;
+
+  img {
+    margin: 70px auto 30px auto;
+  }
+  h5 {
+    font-size: 14px;
+    font-family: $text-font;
+    color: rgb(45, 48, 51);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+  p {
+    font-size: 14px;
+    font-family: $text-font;
+    color: rgb(108, 114, 121);
+    margin: 20px;
+  }
+}
+
+/*=======================Works========================*/
+.works {
+  overflow: hidden;
+
+  .img {
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+  }
+  .img.hover .overlay {
+    opacity: 1;
+  }
+  .img.hover .overlay a.expand {
+    top: 50%;
+    margin-top: -30px;
+    opacity: 1;
+  }
+
+  .overlay {
+    position: absolute;
+    z-index: 20;
+    background: rgba(232, 69, 69, 0.9);
+    overflow: hidden;
+    transition: all .5s;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+
+    a.expand {
+      @include overlay;
+      line-height: 50px;
+      font-weight: 400;
+      font-size: 30px;
+      left: 0;
+      margin: 0 auto;
+      opacity: 0;
+      transition: all 0.5s;
+      font-family: $text-font;
+      &:hover {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+    a.close-overlay {
+      @include overlay;
+      display: block;
+      width: 45px;
+      height: 45px;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 45px;
+      background-color: #000;
+      cursor: pointer;
+      display: none;
+    }
+  }
+}
+
+/*=======================Teams========================*/
+.teams {
+  margin: 100px auto 60px auto;
+
+  h4 {
+    font-size: 22px;
+    font-family: $text-font;
+    color: rgb(45, 48, 51);
+    line-height: 1.2;
+    text-align: left;
+    margin-top: 20px;
+  }
+  h5 {
+    font-size: 13px;
+    font-family: $text-font;
+    color: rgb(232, 69, 69);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: left;
+  }
+  p {
+    font-size: 14px;
+    font-family: $text-font;
+    color: rgb(108, 114, 121);
+    line-height: 1.5;
+    margin-top: 25px;
+  }
+  ul {
+    display: inline-block;
+    margin: 15px 0 40px -40px;
+    li.btn {
+      border: 1px solid;
+      border-color: rgb(232, 236, 238);
+      background-color: rgb(255, 255, 255);
+      width: 42px;
+      height: 42px;
+      border-radius: 3px;
+      padding-top: 8px;
+      &:hover {
+        @include btn-hover;
+      }
+    }
+  }
+}
+
+/*=======================Testimonials========================*/
+ul.slides {
+  background-color: rgb(83, 53, 74);
+
+  p.quote {
+    font-size: 36px;
+    font-family: "Cardo", serif;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    line-height: 1.167;
+    margin: 50px auto 0 70px;
+  }
+  p.title {
+    font-size: 13px;
+    font-family: $text-font;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.615;
+    margin: 35px auto 0 85px;
+  }
+}
+
+/*=======================Download========================*/
+.download {
+  h5 {
+    font-size: 28px;
+    font-family: "Raleway";
+    color: rgb(45, 48, 51);
+    line-height: 0.75;
+    margin-top: 30px;
+  }
+
+  p {
+    font-size: 13px;
+    font-family: "Raleway";
+    color: rgb(45, 48, 51);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.615;
+    margin: 20px 0 -40px 0;
+  }
+
+  a.btn {
+    @include button;
+    &:hover {
+      @include btn-hover;
+    }
+  }
+}
+
+/*=======================Footer========================*/
+footer {
+  margin-top: 100px;
+
+  .footer-top {
+    background-color: rgb(58, 62, 100);
+    padding-top: 50px;
+    padding-bottom: 90px;
+    h5 {
+      font-size: 14px;
+      font-family: $text-font;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    p {
+      @include footer-p;
+    }
+    ul {
+      margin-left: -40px;
+      li.btn {
+        border: 2px solid;
+        border-color: rgb(255, 255, 255);
+        width: 42px;
+        height: 42px;
+        border-radius: 3px;
+        padding-top: 8px;
+        margin-right: 5px;
+        &:hover {
+          @include btn-hover;
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    background-color: rgb(49, 52, 84);
+    height: 74px;
+    padding-top: 20px;
+    p {
+      @include footer-p;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@mixin button {
+  border-radius: 2px;
+  background-color: rgb(232, 69, 69);
+  width: 200px;
+  height: 46px;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 15px 40px;
+  font-family: $text-font;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 80px;
+}
+
+@mixin btn-hover {
+  background-color: #e52e2e;
+  color: #fff;
+  transition-duration: .5s;
+}
+
+@mixin overlay {
+  position: absolute;
+  z-index: 100;
+  text-align: center;
+  color: #fff;
+  top: 0;
+  right: 0;
+}
+
+@mixin footer-p {
+  font-size: 14px;
+  font-family: $text-font;
+  color: rgba(255, 255, 255, 0.502);
+  line-height: 1.607;
+}
